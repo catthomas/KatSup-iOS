@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x6J-bu-aSt">
+                                <rect key="frame" x="16" y="115" width="288" height="413"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dyi-2w-oUG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                <color key="backgroundColor" red="1" green="0.36611655110786057" blue="0.34255960291600063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message here!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2D-fH-NGx">
+                                <rect key="frame" x="26" y="30" width="268" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rzn-x0-RBP"/>
+                                </constraints>
+                                <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdn-Rz-zOD">
+                                <rect key="frame" x="160" y="60" width="134" height="50"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="SEND CAT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendCatPressed" destination="ObA-dk-sSI" eventType="touchUpInside" id="frq-Lx-P9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJD-Y0-3YJ">
+                                <rect key="frame" x="26" y="60" width="134" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1B3-FI-3O4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="GET CAT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCatPressed" destination="ObA-dk-sSI" eventType="touchUpInside" id="Fs5-db-UVt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-kp-kPZ" userLabel="Compact View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f1B-kp-kPZ" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="3HT-3S-w6L"/>
+                            <constraint firstItem="T2D-fH-NGx" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="10" id="4qj-h2-nXb"/>
+                            <constraint firstItem="Dyi-2w-oUG" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="7Of-3a-2xp"/>
+                            <constraint firstItem="oJD-Y0-3YJ" firstAttribute="width" secondItem="T2D-fH-NGx" secondAttribute="width" multiplier="0.5" id="7TS-mP-HzQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Dyi-2w-oUG" secondAttribute="trailing" id="Abe-xE-nFx"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="f1B-kp-kPZ" secondAttribute="bottom" id="BNB-lu-dYl"/>
+                            <constraint firstItem="Jdn-Rz-zOD" firstAttribute="trailing" secondItem="T2D-fH-NGx" secondAttribute="trailing" id="NoG-Gk-jae"/>
+                            <constraint firstAttribute="trailing" secondItem="f1B-kp-kPZ" secondAttribute="trailing" id="ODB-Gt-mVP"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="x6J-bu-aSt" secondAttribute="bottom" id="PEt-gU-A9r"/>
+                            <constraint firstItem="Dyi-2w-oUG" firstAttribute="bottom" secondItem="oJD-Y0-3YJ" secondAttribute="bottom" id="Pby-jy-DEx"/>
+                            <constraint firstItem="x6J-bu-aSt" firstAttribute="top" secondItem="oJD-Y0-3YJ" secondAttribute="bottom" constant="5" id="RlH-vf-VGO"/>
+                            <constraint firstItem="x6J-bu-aSt" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="URB-aj-rOk"/>
+                            <constraint firstItem="T2D-fH-NGx" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="10" id="amX-iO-8qm"/>
+                            <constraint firstItem="Dyi-2w-oUG" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="jsf-eK-nGi"/>
+                            <constraint firstItem="Jdn-Rz-zOD" firstAttribute="top" secondItem="T2D-fH-NGx" secondAttribute="bottom" id="kwT-EU-LKj"/>
+                            <constraint firstItem="Jdn-Rz-zOD" firstAttribute="width" secondItem="T2D-fH-NGx" secondAttribute="width" multiplier="0.5" id="mR3-vq-0J0"/>
+                            <constraint firstItem="oJD-Y0-3YJ" firstAttribute="top" secondItem="T2D-fH-NGx" secondAttribute="bottom" id="nIL-ov-G8q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T2D-fH-NGx" secondAttribute="trailing" constant="10" id="oGp-hE-fT3"/>
+                            <constraint firstItem="oJD-Y0-3YJ" firstAttribute="leading" secondItem="T2D-fH-NGx" secondAttribute="leading" id="pG0-XJ-Rdq"/>
+                            <constraint firstItem="f1B-kp-kPZ" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="plr-Na-IY3"/>
+                            <constraint firstItem="Jdn-Rz-zOD" firstAttribute="height" secondItem="oJD-Y0-3YJ" secondAttribute="height" id="sOd-uy-FRz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x6J-bu-aSt" secondAttribute="trailing" id="tSL-xO-aq9"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="compactView" destination="f1B-kp-kPZ" id="2HP-oH-WTH"/>
+                        <outlet property="getCatButton" destination="oJD-Y0-3YJ" id="CH3-9M-LzD"/>
+                        <outlet property="imageView" destination="x6J-bu-aSt" id="do4-Zl-nKq"/>
+                        <outlet property="sendCatButton" destination="Jdn-Rz-zOD" id="Bdx-Gy-M1H"/>
+                        <outlet property="textField" destination="T2D-fH-NGx" id="S3E-w6-6Pr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="136.73163418290855"/>
+        </scene>
+    </scenes>
+</document>
