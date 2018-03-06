@@ -20,7 +20,7 @@ class CompactView: UIView {
         self.addGestureRecognizer(tap)
     }
     
-    func requestExpansion() {
+    @objc func requestExpansion() {
         delegate?.expandRequested()
     }
 }
